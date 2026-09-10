@@ -11,12 +11,10 @@ package Models;
  */
 public class TrianguloIsoceles extends FiguraGeometrica {
     private double base;
-    private double ladoIgual;
     private double altura;
 
-    public TrianguloIsoceles(double base, double ladoIgual, double altura) {
+    public TrianguloIsoceles(double base, double altura) {
         this.base = base;
-        this.ladoIgual = ladoIgual;
         this.altura = altura;
     }
 
@@ -28,20 +26,16 @@ public class TrianguloIsoceles extends FiguraGeometrica {
         this.base = base;
     }
 
-    public double getLadoIgual() {
-        return ladoIgual;
-    }
-
-    public void setLadoIgual(double ladoIgual) {
-        this.ladoIgual = ladoIgual;
-    }
-
     public double getAltura() {
         return altura;
     }
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    public double calcularLadoIgual() {
+        return Math.sqrt(Math.pow(base / 2, 2) + Math.pow(altura, 2));
     }
 
     @Override
@@ -51,6 +45,6 @@ public class TrianguloIsoceles extends FiguraGeometrica {
 
     @Override
     public double calcularPerimetro() {
-        return (2 * ladoIgual) + base;
+        return base + (2 * calcularLadoIgual());
     }
 }

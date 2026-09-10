@@ -10,67 +10,108 @@ package Models;
  * @author 2830482511008
  */
 public class Triangulo extends FiguraGeometrica {
-    private double base;
-    private double altura;
-    private double ladoA;
-    private double ladoB;
-    private double ladoC;
+    private double xA, yA;
+    private double xB, yB;
+    private double xC, yC;
 
-    public Triangulo(double base, double altura, double ladoA, double ladoB, double ladoC) {
-        this.base = base;
-        this.altura = altura;
-        this.ladoA = ladoA;
-        this.ladoB = ladoB;
-        this.ladoC = ladoC;
+    public Triangulo(double xA, double yA, double xB, double yB, double xC, double yC) {
+        this.xA = xA;
+        this.yA = yA;
+        this.xB = xB;
+        this.yB = yB;
+        this.xC = xC;
+        this.yC = yC;
     }
 
-    public double getBase() {
-        return base;
+    public double getxA() {
+        return xA;
     }
 
-    public void setBase(double base) {
-        this.base = base;
+    public void setxA(double xA) {
+        this.xA = xA;
     }
 
-    public double getAltura() {
-        return altura;
+    public double getyA() {
+        return yA;
     }
 
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setyA(double yA) {
+        this.yA = yA;
     }
 
-    public double getLadoA() {
-        return ladoA;
+    public double getxB() {
+        return xB;
     }
 
-    public void setLadoA(double ladoA) {
-        this.ladoA = ladoA;
+    public void setxB(double xB) {
+        this.xB = xB;
     }
 
-    public double getLadoB() {
-        return ladoB;
+    public double getyB() {
+        return yB;
     }
 
-    public void setLadoB(double ladoB) {
-        this.ladoB = ladoB;
+    public void setyB(double yB) {
+        this.yB = yB;
     }
 
-    public double getLadoC() {
-        return ladoC;
+    public double getxC() {
+        return xC;
     }
 
-    public void setLadoC(double ladoC) {
-        this.ladoC = ladoC;
+    public void setxC(double xC) {
+        this.xC = xC;
+    }
+
+    public double getyC() {
+        return yC;
+    }
+
+    public void setyC(double yC) {
+        this.yC = yC;
+    }
+
+    public double distanciaAB() {
+        return Math.sqrt(Math.pow(xB - xA, 2) + Math.pow(yB - yA, 2));
+    }
+
+    public double distanciaBC() {
+        return Math.sqrt(Math.pow(xC - xB, 2) + Math.pow(yC - yB, 2));
+    }
+
+    public double distanciaCA() {
+        return Math.sqrt(Math.pow(xA - xC, 2) + Math.pow(yA - yC, 2));
     }
 
     @Override
     public double calcularArea() {
-        return (base * altura) / 2;
+        // Monta a matriz 3x3 com as coordenadas dos vértices
+        double[][] matriz = {
+            {xA, yA, 1},
+            {xB, yB, 1},
+            {xC, yC, 1}
+        };
+
+        // Cálculo do Determinante pela Regra de Sarrus
+        double diagPrincipal = (matriz[0][0] * matriz[1][1] * matriz[2][2]) +
+                               (matriz[0][1] * matriz[1][2] * matriz[2][0]) +
+                               (matriz[0][2] * matriz[1][0] * matriz[2][1]);
+
+        double diagSecundaria = (matriz[0][2] * matriz[1][1] * matriz[2][0]) +
+                                (matriz[0][0] * matriz[1][2] * matriz[2][1]) +
+                                (matriz[0][1] * matriz[1][0] * matriz[2][2]);
+
+        double det = diagPrincipal - diagSecundaria;
+
+        if (det < 0) {
+            det = det * -1;
+        }
+
+        return det / 2.0;
     }
 
     @Override
     public double calcularPerimetro() {
-        return ladoA + ladoB + ladoC;
+        return distanciaAB() + distanciaBC() + distanciaCA();
     }
 }

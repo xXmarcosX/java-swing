@@ -10,47 +10,41 @@ package Models;
  * @author 2830482511008
  */
 public class TrianguloRetangulo extends FiguraGeometrica {
-    private double catetoA;
-    private double catetoB;
-    private double hipotenusa;
+    private double base;
+    private double altura;
 
-    public TrianguloRetangulo(double catetoA, double catetoB, double hipotenusa) {
-        this.catetoA = catetoA;
-        this.catetoB = catetoB;
-        this.hipotenusa = hipotenusa;
+    public TrianguloRetangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
     }
 
-    public double getCatetoA() {
-        return catetoA;
+    public double getBase() {
+        return base;
     }
 
-    public void setCatetoA(double catetoA) {
-        this.catetoA = catetoA;
+    public void setBase(double base) {
+        this.base = base;
     }
 
-    public double getCatetoB() {
-        return catetoB;
+    public double getAltura() {
+        return altura;
     }
 
-    public void setCatetoB(double catetoB) {
-        this.catetoB = catetoB;
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
 
-    public double getHipotenusa() {
-        return hipotenusa;
-    }
-
-    public void setHipotenusa(double hipotenusa) {
-        this.hipotenusa = hipotenusa;
+    public double calcularHipotenusa() {
+        return Math.sqrt(Math.pow(base, 2) + Math.pow(altura, 2));
     }
 
     @Override
     public double calcularArea() {
-        return (catetoA * catetoB) / 2;
+        return (base * altura) / 2;
     }
 
     @Override
     public double calcularPerimetro() {
-        return catetoA + catetoB + hipotenusa;
+        return base + altura + calcularHipotenusa();
     }
 }
