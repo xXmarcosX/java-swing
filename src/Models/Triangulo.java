@@ -7,12 +7,10 @@ package Models;
 
 /**
  *
- * @author 2830482511008
+ * @author Marcos Vinicius
  */
 public class Triangulo extends FiguraGeometrica {
-    private double xA, yA;
-    private double xB, yB;
-    private double xC, yC;
+    private double xA, yA, xB, yB, xC, yC;
 
     public Triangulo(double xA, double yA, double xB, double yB, double xC, double yC) {
         this.xA = xA;

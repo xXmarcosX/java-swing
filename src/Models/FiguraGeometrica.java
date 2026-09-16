@@ -7,7 +7,7 @@ package Models;
 
 /**
  *
- * @author 2830482511008
+ * @author Marcos Vinicius
  */
 public abstract class FiguraGeometrica {
     protected String nomeFigura;

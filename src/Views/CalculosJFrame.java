@@ -5,14 +5,13 @@
  */
 package Views;
 
-import Models.Circulo;
-import Models.Quadrado;
+import Models.*;
 import javax.swing.JOptionPane;
 
 
 /**
  *
- * @author 2830482511008
+ * @author Marcos Vinicius
  */
 public class CalculosJFrame extends javax.swing.JFrame {
 
@@ -43,11 +42,33 @@ public class CalculosJFrame extends javax.swing.JFrame {
         RaioCirculoValue = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
+        BaseTrianguloRetInput = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        AlturaTrianguloRetInput = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
+        jLabelXA = new javax.swing.JLabel();
+        InputXA = new javax.swing.JTextField();
+        jLabelYA = new javax.swing.JLabel();
+        InputYA = new javax.swing.JTextField();
+        jLabelXB = new javax.swing.JLabel();
+        InputXB = new javax.swing.JTextField();
+        jLabelYB = new javax.swing.JLabel();
+        InputYB = new javax.swing.JTextField();
+        jLabelXC = new javax.swing.JLabel();
+        InputXC = new javax.swing.JTextField();
+        jLabelYC = new javax.swing.JLabel();
+        InputYC = new javax.swing.JTextField();
+        jLabelEmpty1 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        BaseRetanguloInput = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        AlturaRetanguloInput = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,7 +100,7 @@ public class CalculosJFrame extends javax.swing.JFrame {
                         .addComponent(LabelQuadrado)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(LadoQuadradoInput, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +111,7 @@ public class CalculosJFrame extends javax.swing.JFrame {
                     .addComponent(LadoQuadradoInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addComponent(jButton1)
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Quadrado", jPanel1);
@@ -127,7 +148,7 @@ public class CalculosJFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(RaioCirculoValue, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,7 +157,7 @@ public class CalculosJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(RaioCirculoValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
@@ -145,86 +166,152 @@ public class CalculosJFrame extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Circulo", jPanel2);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
+        jLabel6.setText("Base do triângulo");
 
-        jTabbedPane2.addTab("Triangulo", jPanel3);
+        jLabel7.setText("Altura do triângulo");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
-
-        jTabbedPane2.addTab("Retangulo", jPanel4);
+        jButton6.setText("Calcular");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addGap(54, 54, 54)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AlturaTrianguloRetInput, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BaseTrianguloRetInput, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6)
+                    .addComponent(BaseTrianguloRetInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(AlturaTrianguloRetInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(jButton6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Triangulo Retangulo", jPanel5);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
+        jPanel6.setLayout(new java.awt.GridLayout(7, 2, 10, 10));
+
+        jLabelXA.setText("X de A:");
+        jPanel6.add(jLabelXA);
+        jPanel6.add(InputXA);
+
+        jLabelYA.setText("Y de A:");
+        jPanel6.add(jLabelYA);
+        jPanel6.add(InputYA);
+
+        jLabelXB.setText("X de B:");
+        jPanel6.add(jLabelXB);
+        jPanel6.add(InputXB);
+
+        jLabelYB.setText("Y de B:");
+        jPanel6.add(jLabelYB);
+        jPanel6.add(InputYB);
+
+        jLabelXC.setText("X de C:");
+        jPanel6.add(jLabelXC);
+        jPanel6.add(InputXC);
+
+        jLabelYC.setText("Y de C:");
+        jPanel6.add(jLabelYC);
+        jPanel6.add(InputYC);
+        jPanel6.add(jLabelEmpty1);
+
+        jButton5.setText("Calcular");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(jButton5);
 
         jTabbedPane2.addTab("Triangulo Genérico", jPanel6);
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 632, Short.MAX_VALUE)
+        jLabel2.setText("Base do retângulo");
+
+        jLabel3.setText("Altura do retângulo");
+
+        jButton4.setText("Calcular");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addGap(54, 54, 54)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(AlturaRetanguloInput, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BaseRetanguloInput, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(240, Short.MAX_VALUE))
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(BaseRetanguloInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(AlturaRetanguloInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("tab7", jPanel7);
+        jTabbedPane2.addTab("Retangulo", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
+            .addComponent(jTabbedPane2)
         );
 
         jTabbedPane2.getAccessibleContext().setAccessibleName("Quadrado");
@@ -232,39 +319,81 @@ public class CalculosJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LadoQuadradoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LadoQuadradoInputActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LadoQuadradoInputActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        double raioCirculo = Double.parseDouble(RaioCirculoValue.getText());
+        Circulo circulo = new Circulo(raioCirculo);
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double ladoQuadrado = Double.parseDouble(LadoQuadradoInput.getText());
-        double area, perimetro;
-        
-        Quadrado q = new Quadrado(ladoQuadrado);
-        area = q.calcularArea();
-        perimetro = q.calcularPerimetro();
-        
-        JOptionPane.showMessageDialog(this, "Area: " + area, "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-        JOptionPane.showMessageDialog(this, "Perimetro: " + perimetro, "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        double perimetro = circulo.calcularPerimetro();
+
+        JOptionPane.showMessageDialog(this, "Perímetro: " + String.format("%.2f", perimetro), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         double raioCirculo = Double.parseDouble(RaioCirculoValue.getText());
         Circulo circulo = new Circulo(raioCirculo);
-        
+
         double area = circulo.calcularArea();
-        
+
         JOptionPane.showMessageDialog(this, "Area: " + String.format("%.2f", area), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        double raioCirculo = Double.parseDouble(RaioCirculoValue.getText());
-        Circulo circulo = new Circulo(raioCirculo);
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double ladoQuadrado = Double.parseDouble(LadoQuadradoInput.getText());
+        double area, perimetro;
+
+        Quadrado quadrado = new Quadrado(ladoQuadrado);
+        area = quadrado.calcularArea();
+        perimetro = quadrado.calcularPerimetro();
+
+        JOptionPane.showMessageDialog(this, "Area: " + area, "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Perimetro: " + perimetro, "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void LadoQuadradoInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LadoQuadradoInputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LadoQuadradoInputActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+
+            double base = Double.parseDouble(BaseRetanguloInput.getText());
+            double altura = Double.parseDouble(AlturaRetanguloInput.getText());
+            
+            Retangulo retangulo = new Retangulo(base, altura);
+            double area = retangulo.calcularArea();
+            double perimetro = retangulo.calcularPerimetro();
+            
+            JOptionPane.showMessageDialog(this, "Area: " + String.format("%.2f", area), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Perimetro: " + String.format("%.2f", perimetro), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        double base = Double.parseDouble(BaseTrianguloRetInput.getText());
+        double altura = Double.parseDouble(AlturaTrianguloRetInput.getText());
         
-        double perimetro = circulo.calcularPerimetro();
+        TrianguloRetangulo triangulo = new TrianguloRetangulo(base, altura);
+        double area = triangulo.calcularArea();
+        double perimetro = triangulo.calcularPerimetro();
         
-        JOptionPane.showMessageDialog(this, "Perímetro: " + String.format("%.2f", perimetro), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jButton3ActionPerformed
+        JOptionPane.showMessageDialog(this, "Area: " + String.format("%.2f", area), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Perimetro: " + String.format("%.2f", perimetro), "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        double xA = Double.parseDouble(InputXA.getText());
+        double yA = Double.parseDouble(InputYA.getText());
+        double xB = Double.parseDouble(InputXB.getText());
+        double yB = Double.parseDouble(InputYB.getText());
+        double xC = Double.parseDouble(InputXC.getText());
+        double yC = Double.parseDouble(InputYC.getText());
+
+        Triangulo triangulo = new Models.Triangulo(xA, yA, xB, yB, xC, yC);
+        double area = triangulo.calcularArea();
+        double perimetro = triangulo.calcularPerimetro();
+
+        javax.swing.JOptionPane.showMessageDialog(this, "Area: " + String.format("%.2f", area), "Sucesso", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+        javax.swing.JOptionPane.showMessageDialog(this, "Perimetro: " + String.format("%.2f", perimetro), "Sucesso", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -302,21 +431,44 @@ public class CalculosJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AlturaRetanguloInput;
+    private javax.swing.JTextField AlturaTrianguloRetInput;
+    private javax.swing.JTextField BaseRetanguloInput;
+    private javax.swing.JTextField BaseTrianguloRetInput;
+    private javax.swing.JTextField InputXA;
+    private javax.swing.JTextField InputXB;
+    private javax.swing.JTextField InputXC;
+    private javax.swing.JTextField InputYA;
+    private javax.swing.JTextField InputYB;
+    private javax.swing.JTextField InputYC;
     private javax.swing.JLabel LabelQuadrado;
     private javax.swing.JTextField LadoQuadradoInput;
     private javax.swing.JTextField RaioCirculoValue;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelEmpty1;
+    private javax.swing.JLabel jLabelXA;
+    private javax.swing.JLabel jLabelXB;
+    private javax.swing.JLabel jLabelXC;
+    private javax.swing.JLabel jLabelYA;
+    private javax.swing.JLabel jLabelYB;
+    private javax.swing.JLabel jLabelYC;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 }
+
